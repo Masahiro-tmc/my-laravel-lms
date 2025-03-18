@@ -9,9 +9,17 @@ class RoleSeeder extends Seeder
 {
     public function run()
     {
-        Role::create(['name' => 'admin']);
-        Role::create(['name' => 'instructor']);
-        Role::create(['name' => 'student']);
-        Role::create(['name' => 'organisation']); // New role for organisations
+        if (!Role::where('name', 'admin')->exists()) {
+            Role::create(['name' => 'admin']);
+        }
+        if (!Role::where('name', 'instructor')->exists()) {
+            Role::create(['name' => 'instructor']);
+        }
+        if (!Role::where('name', 'student')->exists()) {
+            Role::create(['name' => 'student']);
+        }
+        if (!Role::where('name', 'organisation')->exists()) {
+            Role::create(['name' => 'organisation']);
+        }
     }
 }
