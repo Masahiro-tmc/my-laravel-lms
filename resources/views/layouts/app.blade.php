@@ -22,6 +22,11 @@
                 <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Courses</a></li>
                 <li class="mb-2"><a href="#" class="block p-2 hover:bg-gray-700 rounded">Settings</a></li>
             </ul>
+
+                <ul>
+                    <li><a href="{{ route('admin.students.index') }}" class="block p-2 hover:bg-gray-700 rounded">Manage Students</a></li>
+                </ul>
+
         </aside>
 
         <!-- Main Content -->
